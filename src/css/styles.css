@@ -16,3 +16,144 @@
 @import url('./badges.css');
 @import url('./back-link.css');
 @import url('./footer.css');
+
+
+
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+  text-align: center;
+}
+
+/* Search Form */
+.search-form {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  max-width: 600px;
+}
+
+.search-form input[type="text"] {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.search-form input[type="text"]:focus {
+  border-color: #4d5ae5;
+  outline: none;
+}
+
+.search-form button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4d5ae5;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.search-form button:hover {
+  background-color: #374bcb;
+  transform: translateY(-2px);
+}
+
+/* Loader Styles */
+.loader {
+  display: none;
+  /* Початково прихований */
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #4d5ae5;
+  /* Колір активної частини */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+  /* Центрування */
+}
+
+/* Анімація обертання */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Gallery Styles */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.gallery__item {
+  display: block;
+  width: 200px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery__item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gallery__item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Load More Button */
+.load-more {
+  margin: 20px auto;
+  display: none;
+}
+
+.load-more button {
+  padding: 10px 30px;
+  font-size: 1rem;
+  background-color: #4d5ae5;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  max-width: 200px;
+}
+
+.load-more button:hover {
+  background-color: #374bcb;
+  transform: translateY(-3px);
+}
+
+/* End Message */
+.end-message {
+  color: #e63946;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  display: none;
+  font-weight: bold;
+}
